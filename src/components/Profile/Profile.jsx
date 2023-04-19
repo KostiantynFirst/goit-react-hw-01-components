@@ -2,33 +2,30 @@ import PropTypes from 'prop-types';
 
 export const Profile = ({username, tag, location, avatar, stats }) => {
     return <ProfileCard>
-    <div class="profile">
-  <div class="description">
+  <div>
     <img
-      src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-      alt="User avatar"
-      class="avatar"
+      src={avatar}
+      alt={tag}
     />
-    <p class="name">Petra Marica</p>
-    <p class="tag">@pmarica</p>
-    <p class="location">Salvador, Brasil</p>
+    <p>{username}</p>
+    <p>{tag}</p>
+    <p>{location}</p>
   </div>
 
-  <ul class="stats">
+  <ul>
     <li>
-      <span class="label">Followers</span>
-      <span class="quantity">1000</span>
+      <span>{stats.followers}</span>
+      <span>{stats.followers(0)}</span>
     </li>
     <li>
-      <span class="label">Views</span>
-      <span class="quantity">2000</span>
+      <span>{stats.views}</span>
+      <span>{stats.views(0)}</span>
     </li>
     <li>
-      <span class="label">Likes</span>
-      <span class="quantity">3000</span>
+      <span>{stats.likes}</span>
+      <span>{stats.likes(0)}</span>
     </li>
   </ul>
-</div>
     </ProfileCard>
 }
 
