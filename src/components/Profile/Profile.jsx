@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'; 
+import { ProfileCard } from './Profile.styled';
 
-export const Profile = ({username, tag, location, avatar, stats }) => {
+export const Profile = ({username, tag, location, avatar, stats}) => {
     return <ProfileCard>
   <div>
     <img
       src={avatar}
-      alt={tag}
+      alt={username}
     />
     <p>{username}</p>
     <p>{tag}</p>
@@ -14,22 +15,23 @@ export const Profile = ({username, tag, location, avatar, stats }) => {
 
   <ul>
     <li>
+      <span>{(Object.keys(stats))[0]}</span>
       <span>{stats.followers}</span>
-      <span>{stats.followers(0)}</span>
     </li>
     <li>
+      <span>{(Object.keys(stats))[1]}</span>
       <span>{stats.views}</span>
-      <span>{stats.views(0)}</span>
     </li>
     <li>
+      <span>{(Object.keys(stats))[2]}</span>
       <span>{stats.likes}</span>
-      <span>{stats.likes(0)}</span>
     </li>
   </ul>
     </ProfileCard>
 }
 
-Profile.PropTypes = {
+
+Profile.propTypes = {
     username: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
