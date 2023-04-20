@@ -1,32 +1,32 @@
 import PropTypes from 'prop-types'; 
-import { ProfileCard } from './Profile.styled';
+import { ProfileCard, Avatar, CardName, CardTag, CardLocation, CardStats, CardElement, CardLabel, CardQuantity } from './Profile.styled';
 
 export const Profile = ({username, tag, location, avatar, stats}) => {
     return <ProfileCard>
-  <div>
-    <img
+  {/* <div> */}
+    <Avatar
       src={avatar}
       alt={username}
     />
-    <p>{username}</p>
-    <p>{tag}</p>
-    <p>{location}</p>
-  </div>
+    <CardName>{username}</CardName>
+    <CardTag>{tag}</CardTag>
+    <CardLocation>{location}</CardLocation>
+  {/* </div> */}
 
-  <ul>
-    <li>
-      <span>{(Object.keys(stats))[0]}</span>
-      <span>{stats.followers}</span>
-    </li>
-    <li>
-      <span>{(Object.keys(stats))[1]}</span>
-      <span>{stats.views}</span>
-    </li>
-    <li>
-      <span>{(Object.keys(stats))[2]}</span>
-      <span>{stats.likes}</span>
-    </li>
-  </ul>
+  <CardStats>
+    <CardElement>
+      <CardLabel>{(Object.keys(stats))[0]}</CardLabel>
+      <CardQuantity>{stats.followers}</CardQuantity>
+    </CardElement>
+    <CardElement>
+      <CardLabel>{(Object.keys(stats))[1]}</CardLabel>
+      <CardQuantity>{stats.views}</CardQuantity>
+    </CardElement>
+    <CardElement>
+      <CardLabel>{(Object.keys(stats))[2]}</CardLabel>
+      <CardQuantity>{stats.likes}</CardQuantity>
+    </CardElement>
+  </CardStats>
     </ProfileCard>
 }
 
