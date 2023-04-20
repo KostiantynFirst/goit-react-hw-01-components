@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types'; 
 import { StatisticCard } from './Statistics.styled';
 
-export const Stat = () => {
+export const Stat = (title, stats) => {
     return <StatisticCard>
-        <section class="statistics">
   <h2 class="title">Upload stats</h2>
 
   <ul class="stat-list">
@@ -24,6 +23,5 @@ export const Stat = () => {
       <span class="percentage">12%</span>
     </li>
   </ul>
-</section>
     </StatisticCard>
 }
