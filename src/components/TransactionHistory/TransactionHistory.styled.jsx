@@ -5,7 +5,7 @@ export const TransactionHistory = styled.table`
     width: 100%;
 `
 export const TableHeader = styled.thead`
-    background-color: #f2f2f2;
+    background-color: #add8e6;
 `
 export const TableTr = styled.tr`
     border: 1px solid #ccc;
@@ -22,7 +22,7 @@ export const TableBody = styled.tbody`
 `
 export const TableBodyTr = styled.tr`
     &nth-child(even) {
-    // background-color: #f2f2f2;
+    background-color: #f2f2f2;
   }
 `
 export const TransactionHistoryTd = styled.td`
