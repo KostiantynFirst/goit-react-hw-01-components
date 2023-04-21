@@ -14,6 +14,7 @@ export const TableTh = styled.th`
     font-weight: bold;
     padding: 12px;
     text-align: center;
+    border: 1px solid #fff;
   }
 `
 export const TableBody = styled.tbody`
@@ -21,27 +22,15 @@ export const TableBody = styled.tbody`
     text-align: center;
 `
 export const TableBodyTr = styled.tr`
-    &nth-child(even) {
+
+    &:nth-child(even) {
     background-color: #f2f2f2;
   }
 `
 export const TransactionHistoryTd = styled.td`
     padding: 10px;
     border: 1px solid #ccc;
-
-    &:first-child {
-        background-color: white;
-        font-weight: bold;
-      }
-
-    &:last-child {
-        text-align: center;
-      }
-       
-    &.special {
-        background-color: yellow;
-        font-weight: bold;
-      }
+    font-weight: bold;
 `
 
   
