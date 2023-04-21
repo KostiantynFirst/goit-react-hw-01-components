@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'; 
 import { ProfileCard, Avatar, CardName, CardTag, CardLocation, CardStats, CardElement, CardLabel, CardQuantity } from './Profile.styled';
 
-export const Profile = ({username, tag, location, avatar, stats}) => {
+export const Profile = ({username, tag, location, avatar, stats }) => {
     return <ProfileCard>
   {/* <div> */}
     <Avatar
