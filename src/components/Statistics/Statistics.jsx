@@ -7,8 +7,9 @@ function randomColor() {
 
 export const Statistics = ({title, stats}) => {
     return <StatisticCard>
-  <StatTitle>{title}</StatTitle> 
 
+{title && <StatTitle>{title}</StatTitle>}
+  
   <StatList>
     {stats.map(({id, label, percentage }) => {
         return (

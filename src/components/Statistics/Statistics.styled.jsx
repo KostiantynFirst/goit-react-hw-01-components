@@ -11,14 +11,6 @@ export const StatTitle = styled.h2`
     font-size: 24px;
     font-weight: bold;
     margin-top: 0;
-    display: ${(title) => {
-        console.log(title);
-        if (title) {
-            return 'block';
-        } else {
-            return 'none';
-        }
-    }}
 `
 export const StatList = styled.ul`
     display: flex;
